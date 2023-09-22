@@ -48,4 +48,6 @@ func SumIntsOrFloats[K comparable, V int64 | float64](m map[K]V) V {
     return s
 }
 
-
+fmt.Printf("Generic Sums: %v and %v\n",
+    SumIntsOrFloats[string, int64](ints),
+    SumIntsOrFloats[string, float64](floats))
